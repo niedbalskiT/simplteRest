@@ -63,7 +63,7 @@ public class GithubUserService {
 
     private UserEntity saveApiInvocationForLogin(String login) {
         Optional<UserEntity> userEntity = githubUserRepository.findByLogin(login);
-        log.debug("User found by login {}: {}",login, userEntity);
+        log.debug("User found by login {}: {}", login, userEntity);
         UserEntity entity = userEntity.orElse(new UserEntity(login, 0L));
         entity.setRequestCount(entity.getRequestCount() + 1L);
         UserEntity savedEntity = githubUserRepository.save(entity);
