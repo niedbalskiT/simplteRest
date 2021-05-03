@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 
 @Repository
-public interface GitRepository extends JpaRepository<UserEntity, Long> {
+public interface GithubUserRepository extends JpaRepository<UserEntity, Long> {
 
-    public Optional<UserEntity> findByLogin(String login);
+    Optional<UserEntity> findByLogin(String login);
 }

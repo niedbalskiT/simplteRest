@@ -1,9 +1,9 @@
 package com.niedbalski.simpleRest.entities;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 import javax.persistence.*;
 
@@ -12,7 +12,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "github_users")
 @NoArgsConstructor
-@AllArgsConstructor
+@ToString
 public class UserEntity {
 
     @Id
